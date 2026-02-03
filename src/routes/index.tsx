@@ -117,7 +117,7 @@ function HomePage() {
   return (
     <>
       {/* ==================== HERO SECTION - CLIENT FOCUSED ==================== */}
-      <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-slate-900">
+      <section className="relative min-h-svh flex items-center justify-center overflow-hidden bg-slate-900 py-20 pt-24 md:py-0">
         {/* Animated Background Orbs */}
         <GradientOrb color="teal" size="xl" position={{ top: '-10%', left: '-5%' }} speed={0.3} />
         <GradientOrb color="emerald" size="lg" position={{ bottom: '10%', right: '-5%' }} speed={0.5} />
@@ -127,15 +127,15 @@ function HomePage() {
         <div className="absolute inset-0 bg-[linear-gradient(rgba(148,163,184,0.03)_1px,transparent_1px),linear-gradient(90deg,rgba(148,163,184,0.03)_1px,transparent_1px)] bg-size-[64px_64px]" />
 
         {/* Hero Content */}
-        <div className="relative z-10 container mx-auto text-center">
+        <div className="relative z-10 container mx-auto text-center px-4">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.2 }}
-            className="mb-6"
+            className="mb-4 md:mb-6"
           >
-            <span className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-teal-500/10 border border-teal-500/20 text-teal-400 text-sm font-medium">
-              <Zap className="w-4 h-4" />
+            <span className="inline-flex items-center gap-2 px-3 py-1.5 md:px-4 md:py-2 rounded-full bg-teal-500/10 border border-teal-500/20 text-teal-400 text-xs md:text-sm font-medium">
+              <Zap className="w-3 h-3 md:w-4 md:h-4" />
               Rozwiązania cyfrowe dla firm
             </span>
           </motion.div>
@@ -144,7 +144,7 @@ function HomePage() {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.4 }}
-            className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-white mb-4"
+            className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold text-white mb-1 md:mb-2"
           >
             Potrzebujesz strony,
           </motion.h1>
@@ -152,7 +152,7 @@ function HomePage() {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.5 }}
-            className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-white mb-4"
+            className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold text-white mb-1 md:mb-2"
           >
             aplikacji lub
           </motion.h1>
@@ -160,7 +160,7 @@ function HomePage() {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.6 }}
-            className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold gradient-text text-glow mb-8"
+            className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold gradient-text text-glow mb-4 md:mb-8"
           >
             automatyzacji?
           </motion.h1>
@@ -169,7 +169,7 @@ function HomePage() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.8 }}
-            className="text-lg md:text-xl text-slate-400 max-w-2xl mx-auto mb-8 leading-relaxed"
+            className="text-base md:text-lg lg:text-xl text-slate-400 max-w-2xl mx-auto mb-6 md:mb-8 leading-relaxed"
           >
             Zbuduję rozwiązanie dopasowane do Twojej firmy. 
             Od <span className="text-white">stron sprzedażowych</span> przez{' '}
@@ -177,16 +177,16 @@ function HomePage() {
             <span className="text-white">narzędzia AI</span> i <span className="text-white">integracje systemów</span>.
           </motion.p>
 
-          {/* Quick benefits */}
+          {/* Quick benefits - hidden on very small screens */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.9 }}
-            className="flex flex-wrap justify-center gap-4 mb-12"
+            className="hidden sm:flex flex-wrap justify-center gap-3 md:gap-4 mb-8 md:mb-12"
           >
             {benefits.map((benefit) => (
-              <span key={benefit} className="inline-flex items-center gap-2 text-slate-300 text-sm">
-                <CheckCircle className="w-4 h-4 text-teal-400" />
+              <span key={benefit} className="inline-flex items-center gap-2 text-slate-300 text-xs md:text-sm">
+                <CheckCircle className="w-3 h-3 md:w-4 md:h-4 text-teal-400" />
                 {benefit}
               </span>
             ))}
@@ -196,7 +196,7 @@ function HomePage() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 1.0 }}
-            className="flex flex-col sm:flex-row gap-4 justify-center"
+            className="flex flex-col sm:flex-row gap-3 md:gap-4 justify-center"
           >
             <motion.div whileHover={{ scale: 1.02 }} whileTap={{ scale: 0.98 }}>
               <Link to="/kontakt" className="btn btn-primary">
@@ -212,12 +212,12 @@ function HomePage() {
           </motion.div>
         </div>
 
-        {/* Scroll Indicator */}
+        {/* Scroll Indicator - hidden on mobile */}
         <motion.div
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 1.5, duration: 1 }}
-          className="absolute bottom-12 left-1/2 -translate-x-1/2"
+          className="hidden md:block absolute bottom-8 left-1/2 -translate-x-1/2"
         >
           <a href="#problemy" className="scroll-indicator">
             <span className="text-slate-500 text-sm mb-2">Scroll</span>
