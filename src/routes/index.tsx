@@ -123,8 +123,42 @@ function HomePage() {
         <GradientOrb color="emerald" size="lg" position={{ bottom: '10%', right: '-5%' }} speed={0.5} />
         <GradientOrb color="cyan" size="md" position={{ top: '40%', right: '20%' }} speed={0.4} blur={100} />
 
-        {/* Grid Pattern Overlay */}
-        <div className="absolute inset-0 bg-[linear-gradient(rgba(148,163,184,0.03)_1px,transparent_1px),linear-gradient(90deg,rgba(148,163,184,0.03)_1px,transparent_1px)] bg-size-[64px_64px]" />
+        {/* 3D Hex Grid – isometric plane */}
+        <div
+          className="absolute -inset-3/4 pointer-events-none"
+          style={{
+            transform: 'perspective(1000px) rotateX(55deg)',
+            transformOrigin: '50% 50%',
+            maskImage:
+              'radial-gradient(ellipse 50% 40% at 50% 50%, black, transparent 70%)',
+            WebkitMaskImage:
+              'radial-gradient(ellipse 50% 40% at 50% 50%, black, transparent 70%)',
+          }}
+        >
+          <motion.div
+            className="absolute -inset-24"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1, y: [0, 96] }}
+            transition={{
+              opacity: { duration: 2, delay: 0.3 },
+              y: { duration: 20, repeat: Infinity, ease: 'linear' },
+            }}
+          >
+            <svg className="w-full h-full" xmlns="http://www.w3.org/2000/svg">
+              <defs>
+                <pattern id="hex-grid" width="56" height="96" patternUnits="userSpaceOnUse">
+                  <path
+                    d="M28,0 L56,16 L56,48 L28,64 L0,48 L0,16 Z M28,64 L28,96"
+                    fill="none"
+                    stroke="rgba(148,163,184,0.15)"
+                    strokeWidth="1"
+                  />
+                </pattern>
+              </defs>
+              <rect width="100%" height="100%" fill="url(#hex-grid)" />
+            </svg>
+          </motion.div>
+        </div>
 
         {/* Hero Content */}
         <div className="relative z-10 container mx-auto text-center px-4">

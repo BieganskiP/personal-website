@@ -1,20 +1,19 @@
 import { Link, createFileRoute } from '@tanstack/react-router'
 import { motion } from 'framer-motion'
+import { ArrowLeft, MessageSquare } from 'lucide-react'
 import {
-  ArrowLeft,
-  Bot,
-  Code,
-  Database,
-  Globe,
-  Laptop,
-  MessageSquare,
-  Plug,
-  Settings,
-  Smartphone,
-  Zap,
-} from 'lucide-react'
-import { ScrollReveal, StaggerContainer, StaggerItem } from '../components/ScrollReveal'
+  SiN8N,
+  SiNodedotjs,
+  SiOpenai,
+  SiPostgresql,
+  SiPython,
+  SiReact,
+  SiTailwindcss,
+  SiTypescript,
+} from 'react-icons/si'
+import { GlobeCategories } from '../components/GlobeCategories'
 import { GradientOrb } from '../components/ParallaxSection'
+import { ScrollReveal, StaggerContainer, StaggerItem } from '../components/ScrollReveal'
 
 export const Route = createFileRoute('/projekty')({
   component: RealizacjePage,
@@ -32,103 +31,16 @@ export const Route = createFileRoute('/projekty')({
   }),
 })
 
-const categories = [
-  {
-    title: 'Strony i sklepy',
-    icon: Globe,
-    color: 'emerald',
-    items: [
-      { name: 'Landing pages', desc: 'Strony sprzedażowe z wysoką konwersją' },
-      { name: 'Strony firmowe', desc: 'Profesjonalna wizytówka Twojej firmy w sieci' },
-      { name: 'Sklepy e-commerce', desc: 'Pełne rozwiązania z płatnościami i magazynem' },
-      { name: 'Blogi i portale', desc: 'Strony z systemem zarządzania treścią' },
-    ],
-  },
-  {
-    title: 'Aplikacje webowe',
-    icon: Laptop,
-    color: 'cyan',
-    items: [
-      { name: 'Systemy CRM', desc: 'Zarządzanie klientami i sprzedażą' },
-      { name: 'Panele administracyjne', desc: 'Dashboardy do zarządzania danymi' },
-      { name: 'Aplikacje SaaS', desc: 'Produkty software-as-a-service' },
-      { name: 'Portale klientów', desc: 'Dedykowane strefy dla użytkowników' },
-    ],
-  },
-  {
-    title: 'Aplikacje mobilne',
-    icon: Smartphone,
-    color: 'teal',
-    items: [
-      { name: 'PWA', desc: 'Progressive Web Apps działające offline' },
-      { name: 'Aplikacje hybrydowe', desc: 'Jeden kod, wiele platform' },
-      { name: 'Aplikacje wewnętrzne', desc: 'Narzędzia dla pracowników w terenie' },
-      { name: 'Aplikacje dla klientów', desc: 'Mobilny dostęp do usług' },
-    ],
-  },
-  {
-    title: 'Narzędzia AI',
-    icon: Bot,
-    color: 'emerald',
-    items: [
-      { name: 'Chatboty', desc: 'Inteligentni asystenci na stronie' },
-      { name: 'Analiza dokumentów', desc: 'Automatyczne przetwarzanie plików' },
-      { name: 'Generowanie treści', desc: 'Wsparcie AI w tworzeniu contentu' },
-      { name: 'Custom AI tools', desc: 'Dedykowane narzędzia AI dla firmy' },
-    ],
-  },
-  {
-    title: 'Automatyzacja',
-    icon: Zap,
-    color: 'cyan',
-    items: [
-      { name: 'Workflow automation', desc: 'Automatyczne procesy biznesowe' },
-      { name: 'Email sequences', desc: 'Automatyczne sekwencje mailowe' },
-      { name: 'Raportowanie', desc: 'Automatyczne generowanie raportów' },
-      { name: 'Zadania cykliczne', desc: 'Scheduled tasks i cron jobs' },
-    ],
-  },
-  {
-    title: 'Integracje',
-    icon: Plug,
-    color: 'teal',
-    items: [
-      { name: 'API integrations', desc: 'Łączenie zewnętrznych usług' },
-      { name: 'Webhooks', desc: 'Real-time komunikacja między systemami' },
-      { name: 'Data sync', desc: 'Synchronizacja danych między aplikacjami' },
-      { name: 'Custom connectors', desc: 'Dedykowane łączniki systemów' },
-    ],
-  },
-]
-
 const techStack = [
-  { name: 'React', icon: Code },
-  { name: 'TypeScript', icon: Code },
-  { name: 'Node.js', icon: Settings },
-  { name: 'Python', icon: Bot },
-  { name: 'PostgreSQL', icon: Database },
-  { name: 'OpenAI', icon: Bot },
-  { name: 'n8n', icon: Zap },
-  { name: 'TailwindCSS', icon: Laptop },
+  { name: 'React', icon: SiReact, color: '#61DAFB' },
+  { name: 'TypeScript', icon: SiTypescript, color: '#3178C6' },
+  { name: 'Node.js', icon: SiNodedotjs, color: '#5FA04E' },
+  { name: 'Python', icon: SiPython, color: '#3776AB' },
+  { name: 'PostgreSQL', icon: SiPostgresql, color: '#4169E1' },
+  { name: 'OpenAI', icon: SiOpenai, color: '#412991' },
+  { name: 'n8n', icon: SiN8N, color: '#EA4B71' },
+  { name: 'TailwindCSS', icon: SiTailwindcss, color: '#06B6D4' },
 ]
-
-const colorClasses = {
-  emerald: {
-    bg: 'bg-emerald-500/10',
-    border: 'border-emerald-500/20',
-    text: 'text-emerald-400',
-  },
-  cyan: {
-    bg: 'bg-cyan-500/10',
-    border: 'border-cyan-500/20',
-    text: 'text-cyan-400',
-  },
-  teal: {
-    bg: 'bg-teal-500/10',
-    border: 'border-teal-500/20',
-    text: 'text-teal-400',
-  },
-}
 
 function RealizacjePage() {
   return (
@@ -167,37 +79,22 @@ function RealizacjePage() {
         </div>
       </section>
 
-      {/* Categories */}
-      <section className="py-20 bg-slate-900">
+      {/* Categories – interactive globe */}
+      <section className="py-12 sm:py-20 bg-slate-900 overflow-hidden">
         <div className="container mx-auto">
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {categories.map((category, catIndex) => {
-              const colors = colorClasses[category.color as keyof typeof colorClasses]
-              return (
-                <motion.div
-                  key={category.title}
-                  initial={{ opacity: 0, y: 30 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ delay: catIndex * 0.1, duration: 0.5 }}
-                  viewport={{ once: true }}
-                  className="p-6 rounded-2xl bg-slate-800/50 border border-slate-700/50"
-                >
-                  <div className={`w-12 h-12 rounded-xl ${colors.bg} flex items-center justify-center mb-4`}>
-                    <category.icon className={`w-6 h-6 ${colors.text}`} />
-                  </div>
-                  <h2 className="text-xl font-bold text-white mb-4">{category.title}</h2>
-                  <ul className="space-y-3">
-                    {category.items.map((item) => (
-                      <li key={item.name} className="flex flex-col">
-                        <span className="text-white font-medium">{item.name}</span>
-                        <span className="text-sm text-slate-400">{item.desc}</span>
-                      </li>
-                    ))}
-                  </ul>
-                </motion.div>
-              )
-            })}
-          </div>
+          <ScrollReveal className="text-center mb-8 sm:mb-12">
+            <span className="inline-block px-4 py-2 rounded-full bg-slate-800 text-teal-400 text-sm font-medium mb-6">
+              Usługi
+            </span>
+            <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
+              Co mogę <span className="gradient-text">zbudować</span>
+            </h2>
+            <p className="text-lg text-slate-400 max-w-xl mx-auto">
+              Kliknij kategorię, aby zobaczyć szczegóły
+            </p>
+          </ScrollReveal>
+
+          <GlobeCategories />
         </div>
       </section>
 
@@ -220,10 +117,17 @@ function RealizacjePage() {
             {techStack.map((tech) => (
               <StaggerItem key={tech.name}>
                 <motion.div
-                  className="flex items-center gap-3 px-6 py-3 rounded-xl bg-slate-800 border border-slate-700 text-slate-300 font-medium hover:border-teal-500/50 hover:text-teal-400 transition-all cursor-default"
+                  className="group flex items-center gap-3 px-6 py-3 rounded-xl bg-slate-800 border border-slate-700 text-slate-300 font-medium transition-all cursor-default"
                   whileHover={{ scale: 1.05, y: -2 }}
+                  style={{ '--brand-color': tech.color, '--brand-border': `${tech.color}80` } as React.CSSProperties}
+                  onMouseEnter={(e) => {
+                    e.currentTarget.style.borderColor = `${tech.color}80`
+                  }}
+                  onMouseLeave={(e) => {
+                    e.currentTarget.style.borderColor = ''
+                  }}
                 >
-                  <tech.icon className="w-5 h-5" />
+                  <tech.icon className="w-5 h-5 transition-colors" style={{ color: tech.color }} />
                   {tech.name}
                 </motion.div>
               </StaggerItem>
