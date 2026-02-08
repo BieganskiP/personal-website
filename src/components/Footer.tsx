@@ -67,9 +67,9 @@ export default function Footer() {
 
           {/* Navigation */}
           <div className="md:col-span-3">
-            <h4 className="text-sm font-semibold text-slate-300 uppercase tracking-wider mb-6">
+            <p className="text-sm font-semibold text-slate-300 uppercase tracking-wider mb-6">
               Nawigacja
-            </h4>
+            </p>
             <ul className="space-y-4">
               {navLinks.map((link) => (
                 <li key={link.name}>
@@ -87,9 +87,9 @@ export default function Footer() {
 
           {/* Contact */}
           <div className="md:col-span-4">
-            <h4 className="text-sm font-semibold text-slate-300 uppercase tracking-wider mb-6">
+            <p className="text-sm font-semibold text-slate-300 uppercase tracking-wider mb-6">
               Kontakt
-            </h4>
+            </p>
             <ul className="space-y-4">
               <li>
                 <a
@@ -107,26 +107,26 @@ export default function Footer() {
                   +48 518 935 733
                 </a>
               </li>
-              <li className="text-slate-500">Wałbrzych, Polska</li>
+              <li className="text-slate-400">Wałbrzych, Polska</li>
             </ul>
           </div>
         </div>
 
         {/* Bottom Bar */}
         <div className="mt-16 pt-8 border-t border-slate-800/50 flex flex-col sm:flex-row justify-between items-center gap-4">
-          <p className="text-slate-500 text-sm">
+          <p className="text-slate-400 text-sm">
             © {currentYear} Patryk Biegański. Wszystkie prawa zastrzeżone.
           </p>
           <div className="flex gap-6">
             <Link
               to="/polityka-prywatnosci"
-              className="text-slate-500 hover:text-slate-300 text-sm transition-colors"
+              className="text-slate-400 hover:text-slate-300 text-sm transition-colors"
             >
               Polityka Prywatności
             </Link>
             <Link
               to="/regulamin"
-              className="text-slate-500 hover:text-slate-300 text-sm transition-colors"
+              className="text-slate-400 hover:text-slate-300 text-sm transition-colors"
             >
               Regulamin
             </Link>
