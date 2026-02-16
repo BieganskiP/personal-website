@@ -35,8 +35,8 @@ const contactMethods = [
     icon: Mail,
     title: 'Email',
     description: 'Najlepszy sposób na szczegółową dyskusję',
-    value: 'kontakt@patrykbieganski.pl',
-    href: 'mailto:kontakt@patrykbieganski.pl',
+    value: 'pdbieganski@gmail.com',
+    href: 'mailto:pdbieganski@gmail.com',
     color: 'teal',
   },
   {
@@ -257,7 +257,7 @@ function KontaktPage() {
           <StaggerContainer className="flex flex-col sm:flex-row gap-4 justify-center">
             <StaggerItem>
               <motion.a
-                href="mailto:kontakt@patrykbieganski.pl"
+                href="mailto:pdbieganski@gmail.com"
                 className="btn btn-primary text-lg px-8 py-4"
                 whileHover={{ scale: 1.02 }}
                 whileTap={{ scale: 0.98 }}

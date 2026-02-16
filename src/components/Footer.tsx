@@ -18,7 +18,7 @@ export default function Footer() {
     },
     {
       name: 'Email',
-      href: 'mailto:kontakt@patrykbieganski.pl',
+      href: 'mailto:pdbieganski@gmail.com',
       icon: Mail,
     },
   ]
@@ -93,10 +93,10 @@ export default function Footer() {
             <ul className="space-y-4">
               <li>
                 <a
-                  href="mailto:kontakt@patrykbieganski.pl"
+                  href="mailto:pdbieganski@gmail.com"
                   className="text-slate-400 hover:text-teal-400 transition-colors"
                 >
-                  kontakt@patrykbieganski.pl
+                  pdbieganski@gmail.com
                 </a>
               </li>
               <li>

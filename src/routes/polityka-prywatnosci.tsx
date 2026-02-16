@@ -79,7 +79,7 @@ function PolitykaPrywatnosciPage() {
                 </p>
                 <ul className="space-y-2 text-slate-300">
                   <li><strong className="text-slate-200">Imię i nazwisko:</strong> Patryk Biegański</li>
-                  <li><strong className="text-slate-200">Adres e-mail:</strong> kontakt@patrykbieganski.pl</li>
+                  <li><strong className="text-slate-200">Adres e-mail:</strong> pdbieganski@gmail.com</li>
                   <li><strong className="text-slate-200">Telefon:</strong> +48 518 935 733</li>
                 </ul>
               </div>
@@ -195,8 +195,8 @@ function PolitykaPrywatnosciPage() {
                 <ul className="space-y-2 text-slate-300">
                   <li>
                     <strong className="text-slate-200">E-mail:</strong>{' '}
-                    <a href="mailto:kontakt@patrykbieganski.pl" className="text-teal-400 hover:text-teal-300">
-                      kontakt@patrykbieganski.pl
+                    <a href="mailto:pdbieganski@gmail.com" className="text-teal-400 hover:text-teal-300">
+                      pdbieganski@gmail.com
                     </a>
                   </li>
                   <li>

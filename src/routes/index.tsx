@@ -576,7 +576,7 @@ function HomePage() {
             <StaggerContainer className="flex flex-col sm:flex-row gap-6 justify-center items-center mb-12">
               <StaggerItem>
                 <motion.a
-                  href="mailto:kontakt@patrykbieganski.pl"
+                  href="mailto:pdbieganski@gmail.com"
                   className="group flex items-center gap-4 px-8 py-4 rounded-2xl bg-slate-800/50 border border-slate-700 hover:border-teal-500/50 transition-all duration-300"
                   whileHover={{ scale: 1.02, y: -4 }}
                   whileTap={{ scale: 0.98 }}
@@ -586,7 +586,7 @@ function HomePage() {
                   </div>
                   <div className="text-left">
                     <div className="text-sm text-slate-400">Email</div>
-                    <div className="text-white font-medium">kontakt@patrykbieganski.pl</div>
+                    <div className="text-white font-medium">pdbieganski@gmail.com</div>
                   </div>
                 </motion.a>
               </StaggerItem>

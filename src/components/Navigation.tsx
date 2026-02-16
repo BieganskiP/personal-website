@@ -83,7 +83,7 @@ export default function Navigation() {
               ))}
 
               <motion.a
-                href="mailto:kontakt@patrykbieganski.pl"
+                href="mailto:pdbieganski@gmail.com"
                 className="btn btn-primary ml-4"
                 whileHover={{ scale: 1.02 }}
                 whileTap={{ scale: 0.98 }}
@@ -212,10 +212,10 @@ export default function Navigation() {
               >
                 <p className="text-slate-400 mb-4">Skontaktuj się</p>
                 <a
-                  href="mailto:kontakt@patrykbieganski.pl"
+                  href="mailto:pdbieganski@gmail.com"
                   className="text-xl text-teal-400 hover:text-teal-300 transition-colors"
                 >
-                  kontakt@patrykbieganski.pl
+                  pdbieganski@gmail.com
                 </a>
               </motion.div>
 
